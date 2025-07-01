@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4fa;
+  margin: 0;
+  padding: 0;
+  width: 360px;
+  min-height: 450px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header-bar {
+  background: #222;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.header-bar h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.input-group span {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+textarea {
+  resize: none;
+  padding: 10px;
+  height: 60px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fdfdfd;
+  color: #333;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #5b6df7;
+  box-shadow: 0 0 0 2px rgba(91, 109, 247, 0.2);
+}
+
+button {
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background-color: #5b6df7;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #3e4ed0;
+}
+
+.button-set {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button-set div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.button-set span {
+  font-size: 13px;
+  color: #444;
+}
+
+#copyStatus, #csrfStatus {
+  font-size: 12px;
+  color: #28a745;
+  margin: 4px 0 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  text-align: left;
+}
+
+#copyStatus.visible, #csrfStatus.visible {
+  opacity: 1;
+}

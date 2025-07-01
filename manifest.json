@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "X Feed Xchange",
+  "version": "0.0.1",
+  "description": "View another user's X feed with permission.",
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "browser_action": {
+    "default_title": "X Feed Xchange",
+    "default_popup": "popup.html",
+    "default_icon": "images/icon.png"
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

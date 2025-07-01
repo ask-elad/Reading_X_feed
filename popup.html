@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>X Feed Panel</title>
+  <link rel="stylesheet" href="popup.css" />
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main class="wrapper">
+    <header class="header-bar">
+      <h1>X Feed Panel</h1>
+    </header>
+
+    <section class="card input-card">
+      <h2>Access Friend's Feed</h2>
+      <div class="input-group">
+        <span>Auth Token</span>
+        <textarea id="friendAuthToken" placeholder="Enter friend's auth_token"></textarea>
+      </div>
+      <div class="input-group">
+        <span>CSRF Token</span>
+        <textarea id="friendCSRFToken" placeholder="Enter friend's ct0 token"></textarea>
+      </div>
+      <button id="useTokenBtn">Fetch Feed</button>
+    </section>
+
+    <section class="card output-card">
+      <div class="button-set">
+        <div>
+          <span>Your Auth Token</span>
+          <button id="getTokenBtn">Copy Auth</button>
+          <p id="copyStatus">Token copied!</p>
+        </div>
+        <div>
+          <span>Your CSRF Token</span>
+          <button id="getCSRFBtn">Copy CSRF</button>
+          <p id="csrfStatus">CSRF token copied!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
